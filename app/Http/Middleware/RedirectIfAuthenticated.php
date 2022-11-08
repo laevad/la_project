@@ -28,7 +28,7 @@ class RedirectIfAuthenticated
 //            }
 
             if (\auth('web')->check() && \auth()->user()->user_type_id == UserType::ADMIN){
-                return redirect()->route('admin.home');
+                return redirect()->route('admin.dashboard');
             }
         }
         return $next($request);

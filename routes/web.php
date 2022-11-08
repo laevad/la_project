@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['prefix'=>'admin','as'=> 'admin.', 'middleware'=> ['isAdmin', 'auth']], function(){
-    Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('dashboard',Dashboard::class)->name('dashboard');
 });
