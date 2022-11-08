@@ -19,7 +19,7 @@ class InspectionTypeSeeder extends Seeder
             ['name'=>'Inspection'],
             ['name'=>'Investigation'],
             ['name'=>'Admin'],
-            ['name'=>'Othe Docs'],
+            ['name'=>'Other Docs'],
         ]);
     }
 }
